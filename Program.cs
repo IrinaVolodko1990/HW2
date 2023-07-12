@@ -21,6 +21,22 @@ Console.WriteLine($"Second unit of this number is {dozens}");
 //78 -> третьей цифры нет
 //32679 -> 6
 
+Console.Write("Input some number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+char[] symbolsArray = number.ToString().ToCharArray();
+char thirdDigit = '0';
+int minLength = 3;
+int searchIndex = 2;
+if (symbolsArray.Length < minLength)
+{
+    Console.WriteLine($"There is no third digit in the {number} ");
+}
+else
+{
+    thirdDigit = symbolsArray[searchIndex];
+    Console.WriteLine($"Third digit in {number} is {thirdDigit}");
+}
+
 //Задача 15: Напишите программу, которая принимает на вход цифру, 
 //обозначающую день недели, и проверяет, является ли этот день выходным.
 //6 -> да
